@@ -1,0 +1,38 @@
+<link rel="import" href="../polymer/polymer-element.html">
+<link rel="import" href="../flip-clock/flip-clock.html">
+
+<dom-module id="mauricio-marquez">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+    <flip-clock class="clock" display-mode="timer" hideSeconds=true show-buttons></flip-clock>
+  </template>
+
+  <script>
+    /**
+     * `mauricio-marquez`
+     * &#34;mi primer custom component&#34;
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class MauricioMarquez extends Polymer.Element {
+      static get is() { return 'mauricio-marquez'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'mauricio-marquez'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(MauricioMarquez.is, MauricioMarquez);
+  </script>
+</dom-module>
