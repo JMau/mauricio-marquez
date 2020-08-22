@@ -1,5 +1,8 @@
 <link rel="import" href="../polymer/polymer-element.html">
 <link rel="import" href="../flip-clock/flip-clock.html">
+<link rel="import" href="../paper-card/paper-card.html">
+<link rel="import" href="../paper-input/paper-input.html">
+<link rel="import" href="../paper-button/paper-button.html">
 
 <dom-module id="mauricio-marquez">
   <template>
@@ -10,6 +13,11 @@
     </style>
     <h2>Hello [[prop1]]!</h2>
     <flip-clock class="clock" display-mode="timer" hideSeconds=true show-buttons></flip-clock>
+    <paper-card>
+      <paper-input></paper-input>
+      <paper-button></paper-button>
+    </paper-card>
+    <slot></slot>
   </template>
 
   <script>
