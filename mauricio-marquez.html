@@ -10,12 +10,15 @@
       :host {
         display: block;
       }
+      .card{
+        background-color: rgb(127, 172, 175);
+      }
     </style>
     <h2>Hello [[componentName]]!</h2>
 
     <flip-clock class="clock" display-mode="timer" hideSeconds=true show-buttons></flip-clock>
 
-    <paper-card heading="[[cardTitle]]">
+    <paper-card class="card" heading="[[cardTitle]]">
       <paper-input value="{{inputValue}}"></paper-input>
       <paper-button>[[buttonTag]]</paper-button>
     </paper-card>
@@ -45,7 +48,8 @@
           },
           inputValue: {
             type: String,
-            value: ""
+            value: "",
+            notify: true
           },
           buttonTag: {
             type: String,
