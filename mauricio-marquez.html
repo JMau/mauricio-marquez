@@ -11,21 +11,13 @@
         display: block;
       }
     </style>
-    <h2>Hello [[prop1]]!</h2>
+    <h2>Hello [[componentName]]!</h2>
+
     <flip-clock class="clock" display-mode="timer" hideSeconds=true show-buttons></flip-clock>
-    <paper-card heading="Propiedad en linea">
-      <paper-input></paper-input>
-      <paper-button>Boton</paper-button>
-    </paper-card>
 
-    <paper-card heading="[[titulo]]">
-      <paper-input></paper-input>
-      <paper-button>Boton</paper-button>
-    </paper-card>
-
-    <paper-card heading="{{inputValue}}">
+    <paper-card heading="[[cardTitle]]">
       <paper-input value="{{inputValue}}"></paper-input>
-      <paper-button>{{inputValue}}</paper-button>
+      <paper-button>[[buttonTag]]</paper-button>
     </paper-card>
     <slot></slot>
   </template>
@@ -43,15 +35,19 @@
       static get is() { return 'mauricio-marquez'; }
       static get properties() {
         return {
-          prop1: {
+          componentName: {
             type: String,
             value: 'mauricio-marquez'
           },
-          titulo: {
+          cardTitle: {
             type: String,
             value: ""
           },
           inputValue: {
+            type: String,
+            value: ""
+          },
+          buttonTag: {
             type: String,
             value: ""
           }
