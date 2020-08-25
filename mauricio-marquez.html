@@ -9,9 +9,22 @@
     <style>
       :host {
         display: block;
+        background-color: silver;
+        @apply --mauricio-marquez;
       }
-      .card{
-        background-color: rgb(127, 172, 175);
+      paper-card {
+        --paper-card-background-color: rgb(0, 60, 65);
+        --paper-card-header-color: white;
+        @apply --mauricio-marquez-paper-card;
+      }
+      paper-input {
+        --paper-input-container-input-color: white;
+        @apply --mauricio-marquez-paper-input;
+      }
+      paper-button {
+        background-color:rgb(65, 194, 87);
+        color: navy;
+        @apply --mauricio-marquez-paper-button;
       }
     </style>
     <h2>Hello [[componentName]]!</h2>
